@@ -1,0 +1,21 @@
+label
+  p Level Name: 
+  input(type="text", value=val)#levelname
+#palette
+  each val, index in ['', '#00B500', '#FF2121', '#4d2f5d', '#333333', '#1F1F1F', '#ffcc00', '#0066ff', '#afaaaa', '#ed1c24', '#00cc66', '#99ccff', '#aa00ff', '#2D7E52', '#9999FF', '#ffcd94']
+    if index % 6 == 0
+      br
+    label
+      input(type="radio", name="brush", value=val)
+#grid
+  ul
+    - var n = 0
+    while n < 30
+      - n++
+      li
+        ul
+          each val in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,21]
+            li.pixel
+label
+  p Code:
+  textarea#levelcode
